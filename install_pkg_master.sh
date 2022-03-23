@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
 
 # install packages 
-yum install epel-release -y
-yum install vim-enhanced -y
-yum install git -y
+apt-get install epel-release -y
+apt-get install vim-enhanced -y
+apt-get install git -y
 
 # install docker 
-yum install docker -y && systemctl enable --now docker
+apt-get install docker -y && systemctl enable --now docker
 
 # install kubernetes cluster 
-yum install kubectl-1.22.6 kubelet-1.22.6 kubeadm-1.22.6 -y
+apt-get install kubectl-1.22.6 kubelet-1.22.6 kubeadm-1.22.6 -y
 systemctl enable --now kubelet
 
 # git clone _Book_k8sInfra.git 
